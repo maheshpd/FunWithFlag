@@ -13,6 +13,8 @@
 		B582CD2B245E7166001CE2F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B582CD29245E7166001CE2F5 /* Main.storyboard */; };
 		B582CD2D245E716A001CE2F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B582CD2C245E716A001CE2F5 /* Assets.xcassets */; };
 		B582CD30245E716A001CE2F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B582CD2E245E716A001CE2F5 /* LaunchScreen.storyboard */; };
+		B596BFBF2463F6CE00BAF21B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596BFBE2463F6CE00BAF21B /* Question.swift */; };
+		B596BFC12463F7EC00BAF21B /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596BFC02463F7EC00BAF21B /* QuestionBank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B582CD2C245E716A001CE2F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B582CD2F245E716A001CE2F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B582CD31245E716A001CE2F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B596BFBE2463F6CE00BAF21B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B596BFC02463F7EC00BAF21B /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		B582CD22245E7166001CE2F5 /* FunWithFlag */ = {
 			isa = PBXGroup;
 			children = (
-				B582CD23245E7166001CE2F5 /* AppDelegate.swift */,
+				B596BFBD2463F6BF00BAF21B /* Model */,
+				B582CD37245E7AE0001CE2F5 /* Controller */,
 				B582CD25245E7166001CE2F5 /* SceneDelegate.swift */,
+				B582CD38245E7AF9001CE2F5 /* View */,
+				B582CD39245E7B14001CE2F5 /* Supporting Files */,
+			);
+			path = FunWithFlag;
+			sourceTree = "<group>";
+		};
+		B582CD37245E7AE0001CE2F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B582CD23245E7166001CE2F5 /* AppDelegate.swift */,
 				B582CD27245E7166001CE2F5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B582CD38245E7AF9001CE2F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				B582CD29245E7166001CE2F5 /* Main.storyboard */,
 				B582CD2C245E716A001CE2F5 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B582CD39245E7B14001CE2F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				B582CD2E245E716A001CE2F5 /* LaunchScreen.storyboard */,
 				B582CD31245E716A001CE2F5 /* Info.plist */,
 			);
-			path = FunWithFlag;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B596BFBD2463F6BF00BAF21B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B596BFBE2463F6CE00BAF21B /* Question.swift */,
+				B596BFC02463F7EC00BAF21B /* QuestionBank.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B582CD28245E7166001CE2F5 /* ViewController.swift in Sources */,
+				B596BFBF2463F6CE00BAF21B /* Question.swift in Sources */,
 				B582CD24245E7166001CE2F5 /* AppDelegate.swift in Sources */,
+				B596BFC12463F7EC00BAF21B /* QuestionBank.swift in Sources */,
 				B582CD26245E7166001CE2F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,16 +325,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84W8QG5399;
-				INFOPLIST_FILE = FunWithFlag/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FunWithFlag/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.createsapp.FunWithFlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,16 +345,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84W8QG5399;
-				INFOPLIST_FILE = FunWithFlag/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FunWithFlag/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.createsapp.FunWithFlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
